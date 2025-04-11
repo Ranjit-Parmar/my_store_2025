@@ -46,3 +46,9 @@ cd my_store
     ```bash
     npm run dev
     ```
+4. **Use this login credentials**:
+
+    ```bash
+    username : mor_2314
+    password : 83r5^_
+    ```

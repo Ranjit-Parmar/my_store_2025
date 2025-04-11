@@ -1,17 +1,16 @@
-// src/components/Header.js
 import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
-import { AuthContext } from '../context/AuthContext'  // Import AuthContext
+import { AuthContext } from '../context/AuthContext'
 
 const Header = () => {
   const navigate = useNavigate()
   const { cart } = useContext(CartContext)
-  const { logout } = useContext(AuthContext)  // Get logout function from AuthContext
+  const { logout } = useContext(AuthContext)
 
   const handleLogout = () => {
-    logout()  // Call logout from context
-    navigate('/')  // Redirect to login page
+    logout()
+    navigate('/')
   }
 
   return (

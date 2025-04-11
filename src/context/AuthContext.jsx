@@ -5,12 +5,12 @@ export const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
   const navigate = useNavigate()
-  const [token, setToken] = useState(localStorage.getItem('token'))  // Initialize token from localStorage
+  const [token, setToken] = useState(localStorage.getItem('token'))  // Get token from localStorage
 
-  // Ensure user is redirected to login page if no token is present on load
+  // user is redirected to login page if no token is present on load
   useEffect(() => {
     if (!token) {
-      navigate('/') // Redirect to login if no token exists
+      navigate('/')
     }
   }, [token, navigate])
 
