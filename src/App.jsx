@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Cart from './pages/Cart'
 import ProductDetail from './pages/ProductDetail'
 import Header from './components/Header'
+import NotFound from './components/NotFound'
 
 function App() {
   const { isLoggedIn } = useContext(AuthContext)
@@ -35,6 +36,7 @@ function App() {
           path="/product/:id"
           element={isLoggedIn ? <ProductDetail /> : <Navigate to="/" />}
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )
